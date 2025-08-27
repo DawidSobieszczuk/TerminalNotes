@@ -1,6 +1,5 @@
 # TerminalNotes
 
-tnotes --help
 ```
 tnotes: a simple tool for managing short notes in the terminal.
 
