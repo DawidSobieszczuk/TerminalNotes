@@ -1,0 +1,8 @@
+{
+  "profiles": {
+    "DawidSobieszczuk.TerminalNotes.Console": {
+      "commandName": "Project",
+      "commandLineArgs": "add \"Test\""
+    }
+  }
+}
