@@ -7,7 +7,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DawidSobieszczuk.TerminalNo
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DawidSobieszczuk.TerminalNotes.Data", "DawidSobieszczuk.TerminalNotes.Data\DawidSobieszczuk.TerminalNotes.Data.csproj", "{8E995AC1-5B25-4F6C-8BF4-FAB059C40EB4}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DawidSobieszczuk.TermianlNotes.Core", "DawidSobieszczuk.TermianlNotes.Core\DawidSobieszczuk.TermianlNotes.Core.csproj", "{D6C1F8B7-7880-425E-B493-9D05E8EE89C6}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DawidSobieszczuk.TerminalNotes.Core", "DawidSobieszczuk.TerminalNotes.Core\DawidSobieszczuk.TerminalNotes.Core.csproj", "{0181DF8F-1E6C-4B57-A0E5-26B8CB193C55}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -23,10 +23,10 @@ Global
 		{8E995AC1-5B25-4F6C-8BF4-FAB059C40EB4}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{8E995AC1-5B25-4F6C-8BF4-FAB059C40EB4}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{8E995AC1-5B25-4F6C-8BF4-FAB059C40EB4}.Release|Any CPU.Build.0 = Release|Any CPU
-		{D6C1F8B7-7880-425E-B493-9D05E8EE89C6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{D6C1F8B7-7880-425E-B493-9D05E8EE89C6}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{D6C1F8B7-7880-425E-B493-9D05E8EE89C6}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{D6C1F8B7-7880-425E-B493-9D05E8EE89C6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0181DF8F-1E6C-4B57-A0E5-26B8CB193C55}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0181DF8F-1E6C-4B57-A0E5-26B8CB193C55}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0181DF8F-1E6C-4B57-A0E5-26B8CB193C55}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0181DF8F-1E6C-4B57-A0E5-26B8CB193C55}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

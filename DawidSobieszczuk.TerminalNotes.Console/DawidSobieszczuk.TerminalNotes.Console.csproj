@@ -24,7 +24,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\DawidSobieszczuk.TermianlNotes.Core\DawidSobieszczuk.TermianlNotes.Core.csproj" />
+    <ProjectReference Include="..\DawidSobieszczuk.TerminalNotes.Core\DawidSobieszczuk.TerminalNotes.Core.csproj" />
     <ProjectReference Include="..\DawidSobieszczuk.TerminalNotes.Data\DawidSobieszczuk.TerminalNotes.Data.csproj" />
   </ItemGroup>
 
