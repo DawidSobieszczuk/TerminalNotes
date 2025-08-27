@@ -6,4 +6,8 @@
     <Nullable>enable</Nullable>
   </PropertyGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\DawidSobieszczuk.TerminalNotes.Data\DawidSobieszczuk.TerminalNotes.Data.csproj" />
+  </ItemGroup>
+
 </Project>
