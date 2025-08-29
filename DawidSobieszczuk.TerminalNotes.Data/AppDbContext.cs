@@ -11,6 +11,18 @@ namespace DawidSobieszczuk.TerminalNotes.Data
         {
         }
 
+        public AppDbContext() : base()
+        {
+        }
+
+        protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
+        {
+            if (!optionsBuilder.IsConfigured)
+            {
+                optionsBuilder.UseSqlite("Data Source=notes.db");
+            }
+        }
+
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
             modelBuilder.Entity<Models.Note>()
