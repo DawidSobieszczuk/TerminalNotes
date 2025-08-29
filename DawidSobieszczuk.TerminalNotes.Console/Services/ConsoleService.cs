@@ -1,15 +1,16 @@
-﻿using System.CommandLine;
+﻿using DawidSobieszczuk.TerminalNotes.Core.Services;
+using System.CommandLine;
 
 namespace DawidSobieszczuk.TerminalNotes.Console.Services
 {
-    internal class ConsoleService
+    internal class ConsoleService(NotesService notesService)
     {
         public int Run(string[] args)
         {
             var rootCommand = new RootCommand("a simple tool for managing short notes in the terminal.");
 
             var addCommand = new Command("add", "Note content should be in quotes.");
-            var addContentArgument = new Argument<string>("message")
+            var addContentArgument = new Argument<string>("content")
             {
                 Description = "The content of the note to be added."
             };
@@ -17,10 +18,10 @@ namespace DawidSobieszczuk.TerminalNotes.Console.Services
             addCommand.Add(addTagsOption);
             addCommand.Add(addContentArgument);
 
-            addCommand.SetAction(parseResult =>
+            addCommand.SetAction(async parseResult =>
             {
-                string content = parseResult.GetValue<string>("message") ?? throw new Exception();
-                // Dodanie notki
+                string content = parseResult.GetValue<string>("content") ?? throw new Exception();
+                await notesService.AddNote(content);
             });
 
             var showCommand = new Command("show", "Displays notes based on the provided options. By default, it shows today's notes.");
