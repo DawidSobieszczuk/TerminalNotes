@@ -4,6 +4,9 @@ using Microsoft.Extensions.DependencyInjection;
 using DawidSobieszczuk.TerminalNotes.Console.Services;
 using DawidSobieszczuk.TerminalNotes.Data;
 using Microsoft.EntityFrameworkCore;
+using DawidSobieszczuk.TerminalNotes.Core.Services;
+using DawidSobieszczuk.TerminalNotes.Data.Interfaces;
+using DawidSobieszczuk.TerminalNotes.Data.DataProviders;
 
 namespace DawidSobieszczuk.TerminalNotes.Console
 {
@@ -28,12 +31,17 @@ namespace DawidSobieszczuk.TerminalNotes.Console
                 })
                 .ConfigureServices((hostContext, services) =>
                 {
-                    services.AddTransient<ConsoleService>();
-                    services.AddDbContext<AppDbContext>(options => { 
+                    services.AddDbContext<AppDbContext>(options => {
                         options.UseSqlite("Data Source =" + Path.Combine(dbFilePath,
                             hostContext.Configuration["DatabaseSettings:DbFileName"] ?? "data.db"
                             ));
                     });
+                    services.AddDbContextFactory<AppDbContext>();
+
+                    services.AddScoped<ConsoleService>();
+                    services.AddScoped<IAppDataProvider, DatabaseAppDataProvider>();
+                    services.AddScoped<NotesService>();
+                    
                 })
                 .Build();
 
@@ -42,7 +50,7 @@ namespace DawidSobieszczuk.TerminalNotes.Console
             var dbContext = serviceScope.ServiceProvider.GetRequiredService<AppDbContext>();
             dbContext.Database.Migrate();
 
-            var consoleService = host.Services.GetRequiredService<ConsoleService>();
+            var consoleService = serviceScope.ServiceProvider.GetRequiredService<ConsoleService>();
             return consoleService.Run(args);
         }
     }
