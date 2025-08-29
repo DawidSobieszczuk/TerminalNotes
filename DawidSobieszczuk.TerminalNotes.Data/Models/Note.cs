@@ -4,8 +4,8 @@
     {
         public required int Id { get; set; }
         public required string Content { get; set; }
-        public required List<string> Tags { get; set; }
+        public List<string>? Tags { get; set; }
         public required DateTime CreatedAt { get; set; }
-        public DateTime UpdatedAt { get; set; }
+        public DateTime? UpdatedAt { get; set; }
     }
 }
