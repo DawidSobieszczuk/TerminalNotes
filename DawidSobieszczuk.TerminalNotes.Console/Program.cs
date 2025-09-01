@@ -46,7 +46,7 @@ namespace DawidSobieszczuk.TerminalNotes.Console
                     services.AddSingleton<ICommandApp>(
                         _ =>
                         {
-                            var app = new CommandApp(new DependencyInjectionRegistrar(services));
+                            var app = new CommandApp<RunCommand>(new DependencyInjectionRegistrar(services));
                             app.Configure(config =>
                             {
                                 config.PropagateExceptions();
